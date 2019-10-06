@@ -1,0 +1,58 @@
+<html>
+<script>
+ // question 1:
+ var students;
+    function students(name,age,semester,program ){
+    this.name=name;
+    this.age=age;
+    this.semester=semester;
+	this.program=program;
+	}
+
+//question 2:
+    var std1= new students("ali",21,"3rd");
+    var std2= new students("ahmed",23,"1st");
+    var std3= new students("sara",20,"2nd");
+	
+// question 3:
+    students.prototype.program="mcs";
+	Object.defineProperty(std1,"program",{value:"mcs"});
+	
+// question 4:
+   
+    students.std1=function(){
+	return this.name +" "+ this.age +" "+ this.semester;
+	
+	}
+	 students.std2=function(){
+	return this.name +" "+ this.age +" "+ this.semester;
+	
+	}
+	 students.std3=function(){
+	return this.name +" "+ this.age +" "+ this.semester;
+	
+	}
+	
+	console.log(std1);
+	console.log(std2);
+// question 5:
+   
+    var stdArray=[ {name:'palwasha' ,age:24 ,semester:'3rd'},{name:'ahmed' ,age:23 ,semester:'2st'},{name:"sara" ,age:20 ,semester:'3rdd'}];
+    var value=prompt("enter the name :");
+	
+  
+    if (stdArray[name]===value){
+	
+    console.log(stdArray[name]);
+    
+    }
+	else
+	{
+	console.log("not found");
+    
+	}
+   
+
+
+</script>
+</html>
